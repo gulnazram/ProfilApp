@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FullScreenCollectionViewCell" customModule="ProfilTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="178"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="178"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kD-1n-zsM">
+                        <rect key="frame" x="-20" y="-20" width="280" height="218"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D2v-nn-lN3">
+                                <rect key="frame" x="20" y="20" width="240" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sRP-r9-aq6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qqa-yR-Cnd">
+                                <rect key="frame" x="20" y="20" width="240" height="178"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Qqa-yR-Cnd" firstAttribute="leading" secondItem="6kD-1n-zsM" secondAttribute="leading" constant="20" id="0rk-Wk-o4T"/>
+                            <constraint firstItem="Qqa-yR-Cnd" firstAttribute="top" secondItem="6kD-1n-zsM" secondAttribute="top" constant="20" id="8pV-wZ-NTG"/>
+                            <constraint firstItem="Qqa-yR-Cnd" firstAttribute="centerX" secondItem="6kD-1n-zsM" secondAttribute="centerX" id="Dgu-ft-iQn"/>
+                            <constraint firstItem="Qqa-yR-Cnd" firstAttribute="centerY" secondItem="6kD-1n-zsM" secondAttribute="centerY" id="FwM-GK-mrE"/>
+                            <constraint firstAttribute="bottom" secondItem="Qqa-yR-Cnd" secondAttribute="bottom" constant="20" id="Uvx-yH-EQ3"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqa-yR-Cnd" secondAttribute="trailing" constant="20" id="Vxj-S5-u9R"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="yPc-5m-Rf4"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="DsH-aY-epn"/>
+                    </scrollView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="6kD-1n-zsM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-20" id="0lh-PI-dJe"/>
+                <constraint firstItem="6kD-1n-zsM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LWg-rn-4jS"/>
+                <constraint firstItem="6kD-1n-zsM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-20" id="bOj-dq-PzM"/>
+                <constraint firstItem="6kD-1n-zsM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="llU-3p-6uA"/>
+            </constraints>
+            <size key="customSize" width="240" height="178"/>
+            <connections>
+                <outlet property="photoView" destination="Qqa-yR-Cnd" id="CFt-uU-EJX"/>
+                <outlet property="scrollView" destination="6kD-1n-zsM" id="PO6-Nr-ae0"/>
+            </connections>
+            <point key="canvasLocation" x="269.56521739130437" y="122.54464285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
